@@ -1,0 +1,33 @@
+---
+AWSTemplateFormatVersion: "version date"
+
+Description:
+  String
+
+Metadata:
+  template metadata
+
+Parameters:
+  set of parameters
+
+Rules:
+  set of rules
+
+Mappings:
+  set of mappings
+
+Conditions:
+  set of conditions
+
+Transform:
+  set of transforms
+Resources:
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP for Apache Web Server and SSH for secure connection.
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: 0.0.0.0/0
